@@ -1,5 +1,8 @@
 using EmployeeManagament;
+using EmployeeManagament.Services;
 using Microsoft.EntityFrameworkCore;
+using MudBlazor.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddDbContext<ApplictaionDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnString")));
+builder.Services.AddTransient<EmployeeService>();
+builder.Services.AddTransient<DepartmentService>();
+builder.Services.AddMudServices();
+
 
 
 
