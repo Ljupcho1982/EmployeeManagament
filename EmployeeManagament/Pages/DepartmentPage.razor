@@ -29,6 +29,7 @@
     </MudCardContent>
 
 </MudCard>
+<input @bind="searchString" @bind:event="oninput" />
 <br/>
 
 <MudTable Items="GetAll()" Filter="new Func<Department, bool>(Search)" @bind-department="department">

@@ -110,10 +110,10 @@
     private bool Search(Employee employee)
     {
 
-        if (string.IsNullOrWhiteSpace(searchString)) return true;
+        if (string.IsNullOrWhiteSpace(searchString)) return true ;
 
         if (employee.FirstName.Contains(searchString, StringComparison.OrdinalIgnoreCase) ||
-         employee.LastName.Contains(searchString, StringComparison.OrdinalIgnoreCase)) ;
+         employee.LastName.Contains(searchString, StringComparison.OrdinalIgnoreCase))
         {
 
             return true;
